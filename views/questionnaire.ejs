@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+	  <body>
+		  <form action="/users/input" method="GET">
+		  <h1>性別は？</h1>
+		  	<input type="radio" name="性別" value="男" checked="checked"/>男
+			<input type="radio" name="性別" value="女" />女<br>
+		  <h1>年齢は？</h1>
+		  <select name="age">
+		  <option value="10">10代</option>
+		  <option value="20">20代</option>
+		  <option value="30">30代</option>
+		  <option value="40">40代</option>
+		  </select></p>
+	  	  <h1>あなたの好きな映画のタイトルは？</h1>
+			  <input type="text" name="title" id="title" /><br>
+	        <h1>その映画がwebで配信される場合...<h1>
+		<h2>いくらぐらいから「高い」と思いますか？<h2>
+		  <select name="expensive">
+		  <option value="1000">1000円</option>
+		  <option value="2000">2000円</option>
+		  <option value="3000">3000円</option>
+		  <option value="4000">4000円</option>
+		  <option value="5000">5000円</option>
+		  <option value="6000">6000円</option>
+		  </select></p>
+		<h2>いくらぐらいから「安い」と思いますか？<h2>
+		  <select name="cheap">
+		  <option value="1000">1000円</option>
+		  <option value="2000">2000円</option>
+		  <option value="3000">3000円</option>
+		  <option value="4000">4000円</option>
+		  <option value="5000">5000円</option>
+		  <option value="6000">6000円</option>
+	  	</select></p>	
+		<h2>いくらぐらいから「高すぎて買えない」と思いますか？<h2>
+		  <select name="so_expensive">
+		  <option value="1000">1000円</option>
+		  <option value="2000">2000円</option>
+		  <option value="3000">3000円</option>
+		  <option value="4000">4000円</option>
+		  <option value="5000">5000円</option>
+		  <option value="6000">6000円</option>
+		  </select></p>	
+		<h2>いくらぐらいから「安すぎて疑わしい」と思いますか？<h2>
+		  <select name="so_cheap">
+		  <option value="1000">1000円</option>
+		  <option value="2000">2000円</option>
+		  <option value="3000">3000円</option>
+		  <option value="4000">4000円</option>
+		  <option value="5000">5000円</option>
+		  <option value="6000">6000円</option>
+		  </select></p>
+		 	 <button id="btn">答える</button><br>
+		  </form>
+	  </body>
+</html>
