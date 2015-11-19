@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/input',function(req,res,next){
 	var newansDB = new ansDB();
+	console.log(req.query.sex);
 	newansDB.sex =req.query.sex;
 	newansDB.age =req.query.age;
 	newansDB.title =req.query.title;
