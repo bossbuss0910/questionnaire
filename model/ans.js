@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/ansdb');
+mongoose.connect(process.env.MONGOLAB_URI||'mongodb://localhost/ansdb');
 
 var ansSchema = mongoose.Schema({
 		  sex:   { type: String },
