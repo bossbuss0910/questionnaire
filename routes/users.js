@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+
+var bodyParser = require('body-parser');
+router.use(bodyParser());
+
 //データベース用意
 var model = require('../model/ans.js');
 var ansDB  = model.ansDB;	
@@ -9,16 +13,16 @@ router.get('/', function(req, res, next) {
   res.render('questionnaire',{title:'アンケート'});
 });
 
-router.get('/input',function(req,res,next){
+router.post('/input',function(req,res,next){
 	var newansDB = new ansDB();
-	console.log(req.query.sex);
-	newansDB.sex =req.query.sex;
-	newansDB.age =req.query.age;
-	newansDB.title =req.query.title;
-	newansDB.expensive =req.query.expensive;
-	newansDB.cheap =req.query.cheap;
-	newansDB.so_expensive =req.query.so_expensive;
-	newansDB.so_cheap =req.query.so_cheap;
+	console.log(req.body.sex);
+	newansDB.sex =req.body.sex;
+	newansDB.age =req.body.age;
+	newansDB.title =req.body.title;
+	newansDB.expensive =req.body.expensive;
+	newansDB.cheap =req.body.cheap;
+	newansDB.so_expensive =req.body.so_expensive;
+	newansDB.so_cheap =req.body.so_cheap;
 	console.log(newansDB);
 	newansDB.save(function(err){
 		if (err){console.log(err);}
